@@ -55,7 +55,7 @@ namespace Projekt
             EdytujElement ee = new EdytujElement();
             ee.ShowDialog();
         }
-
+        //1) akcja przycisków 
         private void Button1_Click(object sender, EventArgs e)
         {
             
@@ -81,7 +81,7 @@ namespace Projekt
 
 
         }
-
+        //2)
         private void Button2_Click(object sender, EventArgs e)
         {
             SQLiteConnection myconnection = new SQLiteConnection("Data Source=C:\\Users\\Marek\\Desktop\\Win Forms Project\\Projekt\\Projekt\\bin\\Debug\\WydatkiDB.db; Version =3;");
@@ -106,7 +106,7 @@ namespace Projekt
 
 
         }
-
+        //3)
         private void Button3_Click(object sender, EventArgs e)
         {
             SQLiteConnection myconnection = new SQLiteConnection("Data Source=C:\\Users\\Marek\\Desktop\\Win Forms Project\\Projekt\\Projekt\\bin\\Debug\\WydatkiDB.db; Version =3;");

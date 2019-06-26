@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//główna klasa
+
 namespace Projekt
 {
     static class Program

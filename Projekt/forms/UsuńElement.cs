@@ -39,9 +39,10 @@ namespace Projekt
 
             }
         }
-
+        //akcja przycisku
         private void DltButton_Click(object sender, EventArgs e)
         {
+            //połączenie z bazą 
             SQLiteConnection myconnection = new SQLiteConnection("Data Source=C:\\Users\\Marek\\Desktop\\Win Forms Project\\Projekt\\Projekt\\bin\\Debug\\WydatkiDB.db; Version =3;");
             myconnection.Open();
             SQLiteCommand cmd = new SQLiteCommand();
@@ -60,7 +61,7 @@ namespace Projekt
 
 
             }
-
+            //okienko informacyjne 
             MessageBox.Show("Element został usunięty");
 
             //"delete from database.WydatkiDB where ID='" + IndexBox.Text + "';";

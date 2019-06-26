@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//klasa stworzona w celu połączenia bazy danych z projektem w środowisku Visual Studio
+
 namespace Projekt
 {
     public class SqlDataAcces

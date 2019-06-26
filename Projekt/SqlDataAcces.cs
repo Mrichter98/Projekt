@@ -8,13 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//klasa stworzona w celu połączenia bazy danych z projektem w środowisku Visual Studio
+/// <summary>
+/// klasa stworzona w celu połączenia bazy danych z projektem w środowisku Visual Studio
+/// </summary>
 
 namespace Projekt
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za połączenie i funkcjonowanie bazy danych z programem
+    /// </summary>
     public class SqlDataAcces
     {
-        //metoda wypisania danych z bazy
+        /// <summary>
+        /// metoda wypisania danych z bazy
+        /// </summary>
         public static List<WydatkiModel> LoadWydatki()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -23,8 +30,9 @@ namespace Projekt
                 return output.ToList();
             }
         }
-
-        //metoda  zapisania danych do bazy
+        /// <summary>
+        /// metoda  zapisania danych do bazy
+        /// </summary>
         public static void SaveWydatki(WydatkiModel wydatki)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))

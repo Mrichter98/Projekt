@@ -10,14 +10,22 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
+    /// <summary>
+    /// klasa odpoweidzialana za wprowadzenie do bazy danych, danych dotyczących wydatkó
+    /// </summary>
     public partial class DodajWpływ : Form
     {
+        
         public DodajWpływ()
         {
             InitializeComponent();
         }
 
-        //dodanie akcji dla przycisku
+        /// <summary>
+        /// Metoda zapisania do bazy danych wpisanych przez użytkownika danych
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button1_Click(object sender, EventArgs e)
         {
             //stworzenie obiektu klasy WydatkiModel

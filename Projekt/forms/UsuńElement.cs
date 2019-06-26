@@ -12,13 +12,20 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za szukanie oraz usuwanie elementów z bazy danych 
+    /// </summary>
     public partial class UsuńElement : Form
     {
         public UsuńElement()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Metoda wypisania elementu o danym ID z bazy, metoda jest przypisana do akcji przycisku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRfrsh_Click(object sender, EventArgs e)
         {
             SQLiteConnection myconnection = new SQLiteConnection("Data Source=C:\\Users\\Marek\\Desktop\\Win Forms Project\\Projekt\\Projekt\\bin\\Debug\\WydatkiDB.db; Version =3;");
@@ -39,7 +46,11 @@ namespace Projekt
 
             }
         }
-        //akcja przycisku
+        /// <summary>
+        /// Metoda usunięcia elementu o danym ID i bazy, metoda jest przypisana do akcji przycisku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DltButton_Click(object sender, EventArgs e)
         {
             //połączenie z bazą 
@@ -64,7 +75,6 @@ namespace Projekt
             //okienko informacyjne 
             MessageBox.Show("Element został usunięty");
 
-            //"delete from database.WydatkiDB where ID='" + IndexBox.Text + "';";
         }
 
 

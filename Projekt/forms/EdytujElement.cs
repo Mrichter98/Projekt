@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za znalezienie oraz edycje wybranego elementu 
+    /// </summary>
     public partial class EdytujElement : Form
     {
         public EdytujElement()
@@ -18,7 +21,11 @@ namespace Projekt
             InitializeComponent();
         }
 
-        //metoda akcji przycisku
+        /// <summary>
+        /// Metoda odpoweidzialan za wymisanie z bazy danych elementu o wcześniej podanym ID przypisana do akcji przycisku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnRfrsh2_Click(object sender, EventArgs e)
         {
             //stworzenie obiektu myconnection odpowiedzialnego za połączenie z bazą danych
@@ -46,7 +53,11 @@ namespace Projekt
 
             }
         }
-
+        /// <summary>
+        /// Metoda odpoweidzilana za edycję danego elementu przypisana do akcji przycisku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button1_Click(object sender, EventArgs e)
         {
             //stworzenie obiektu wm3 klasy WydatkiModel
@@ -91,7 +102,11 @@ namespace Projekt
         }
 
 
-        //metoda odpowiedzialna za wpisanie danych do textboxów po przyciśnięciu na wiersz w DataGridView
+        /// <summary>
+        /// Metoda odpowiedzialna za wpisanie danych do textboxów po przyciśnięciu na wiersz w DataGridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Grid3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             foreach (DataGridViewRow rowupdate in grid3.SelectedRows)

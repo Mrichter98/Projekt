@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
+    /// <summary>
+    /// Klasa, służy jako model wydatku/przychodu
+    /// </summary>
+
     public class WydatkiModel
     {
         public int Id { get; set; }

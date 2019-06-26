@@ -11,6 +11,9 @@ using System.Data.SQLite;
 
 namespace Projekt
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za okienko historii
+    /// </summary>
     public partial class Historia : Form
     {
         public Historia()
@@ -19,7 +22,12 @@ namespace Projekt
             
         }
 
-        //metoda odpowiedzialna za wczytanie bazy danych do DataGrida
+
+        /// <summary>
+        /// metoda odpowiedzialna za wczytanie bazy danych do DataGrida
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Historia_Load(object sender, EventArgs e)
         {
             SQLiteConnection myconnection = new SQLiteConnection("Data Source=C:\\Users\\Marek\\Desktop\\Win Forms Project\\Projekt\\Projekt\\bin\\Debug\\WydatkiDB.db; Version =3;");

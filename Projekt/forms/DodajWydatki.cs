@@ -13,6 +13,9 @@ using System.Configuration;
 
 namespace Projekt
 {
+    /// <summary>
+    /// Klasa odpoweidzialan za wpisanie podanych przez aktora wartości do bazy danych 
+    /// </summary>
     public partial class DodajWydatki : Form
     {
 
@@ -26,13 +29,20 @@ namespace Projekt
         //stworzenie listy wydatki 
         List<WydatkiModel> wydatki = new List<WydatkiModel>();
 
+        /// <summary>
+        /// wywołanie metody z klasy SqlDataAcces
+        /// </summary>
         public void LoadWydatkiList()
         {
             wydatki = SqlDataAcces.LoadWydatki();
 
         }
 
-        //metoda stworzona w celu uzyskania/ograniczenia dostępu poprzez checkbox do dataPickera 
+        /// <summary>
+        /// metoda stworzona w celu uzyskania/ograniczenia dostępu poprzez checkbox do dataPickera 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -43,7 +53,11 @@ namespace Projekt
 
         }
 
-        //metoda akcji przycisku
+        /// <summary>
+        /// metoda odpowiedzialna za wprowadzenie podanych przez użytkownika danych do bazy 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button1_Click(object sender, EventArgs e)
         {
             //stworzenie obiektu wm klasy WydatkiModel

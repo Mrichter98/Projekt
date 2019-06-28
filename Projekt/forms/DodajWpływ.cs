@@ -29,15 +29,17 @@ namespace Projekt
         private void Button1_Click(object sender, EventArgs e)
         {
             //stworzenie obiektu klasy WydatkiModel
-            WydatkiModel wm2 = new WydatkiModel();
+            WydatkiModel wm2 = new WydatkiModel
+            {
 
-            //przypisanie danych wprowadzonych z klawiatury przez formularz DodajWpływ do obiektu wm2
-            wm2.MarketPlace = IncomeFrome.Text;
-            wm2.Price = Income.Text;
-            wm2.Description = Description2.Text;
-            wm2.Category = "--";
-            wm2.BuyDate = IncomeData.Text;
-            wm2.GwarancyOffDate = "--";
+                //przypisanie danych wprowadzonych z klawiatury przez formularz DodajWpływ do obiektu wm2
+                MarketPlace = IncomeFrome.Text,
+                Price = Income.Text,
+                Description = Description2.Text,
+                Category = "--",
+                BuyDate = IncomeData.Text,
+                GwarancyOffDate = "--"
+            };
 
             //wprowadzenie obiektu wm2 do bazy danych
             SqlDataAcces.SaveWydatki(wm2);

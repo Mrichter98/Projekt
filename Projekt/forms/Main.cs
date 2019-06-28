@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
-    public partial class Main : Form
+    public partial class Main : Form 
     {
         public Main()
         {
             InitializeComponent();
+
+
         }
 
         /// <summary>
@@ -81,6 +83,7 @@ namespace Projekt
             EdytujElement ee = new EdytujElement();
             ee.ShowDialog();
         }
+        readonly SQLiteCommand cmd = new SQLiteCommand();
         /// <summary>
         /// Metoda akcji przycisku która wyświetla na DataGridzie w okienku głównym sumę wszystkich przychodów
         /// </summary>
@@ -88,10 +91,9 @@ namespace Projekt
         /// <param name="e"></param>
         private void Button1_Click(object sender, EventArgs e)
         {
-            
+
             SQLiteConnection myconnection = new SQLiteConnection("Data Source=C:\\Users\\Marek\\Desktop\\Win Forms Project\\Projekt\\Projekt\\bin\\Debug\\WydatkiDB.db; Version =3;");
             myconnection.Open();
-            SQLiteCommand cmd = new SQLiteCommand();
             cmd.Connection = myconnection;
             cmd.CommandText = "Select sum(Price) from Bilans  where Price> '" + 0 + "'";
             //sum(Price)
@@ -120,7 +122,7 @@ namespace Projekt
         {
             SQLiteConnection myconnection = new SQLiteConnection("Data Source=C:\\Users\\Marek\\Desktop\\Win Forms Project\\Projekt\\Projekt\\bin\\Debug\\WydatkiDB.db; Version =3;");
             myconnection.Open();
-            SQLiteCommand cmd = new SQLiteCommand();
+            
             cmd.Connection = myconnection;
             cmd.CommandText = "Select sum(Price) from Bilans  where Price< '" + 0 + "'";
             //sum(Price)
@@ -149,7 +151,6 @@ namespace Projekt
         {
             SQLiteConnection myconnection = new SQLiteConnection("Data Source=C:\\Users\\Marek\\Desktop\\Win Forms Project\\Projekt\\Projekt\\bin\\Debug\\WydatkiDB.db; Version =3;");
             myconnection.Open();
-            SQLiteCommand cmd = new SQLiteCommand();
             cmd.Connection = myconnection;
             cmd.CommandText = "Select sum(Price) from Bilans";
             //sum(Price)
@@ -168,6 +169,74 @@ namespace Projekt
             }
 
 
+        }
+        double nr1, nr2;
+        /// <summary>
+        /// metoda dodawania liczb
+        /// </summary>
+        /// <returns></returns>
+        public double Add_Number()
+        {
+            double.TryParse(Number1.Text, out nr1);
+            double.TryParse(Number2.Text, out nr2);
+            return (nr1 + nr2);
+        }
+
+        /// <summary>
+        /// metoda odejmowania liczb
+        /// </summary>
+        /// <returns></returns>
+        public double Sub_Number()
+        {
+            double.TryParse(Number1.Text, out nr1);
+            double.TryParse(Number2.Text, out nr2);
+            return (nr1 - nr2);
+        }
+        /// <summary>
+        /// metoda mnożenia liczb
+        /// </summary>
+        /// <returns></returns>
+
+
+
+        public double Mult_Number()
+        {
+            double.TryParse(Number1.Text, out nr1);
+            double.TryParse(Number2.Text, out nr2);
+            return (nr1 * nr2);
+        }
+        /// <summary>
+        /// metoda akcji przycisku dodawania
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            double adding;
+            adding = Add_Number();
+            Wynik.Text = adding.ToString();
+        }
+        /// <summary>
+        /// metoda akcji przycisku odejmowania
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnSub_Click(object sender, EventArgs e)
+        {
+            double subbing;
+            subbing = Sub_Number();
+            Wynik.Text = subbing.ToString();
+        }
+        /// <summary>
+        /// metoda akcji przycisku mnożenia
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnDev_Click(object sender, EventArgs e)
+        {
+            double multing;
+            multing = Mult_Number();
+            Wynik.Text = multing.ToString();
         }
     }
 }

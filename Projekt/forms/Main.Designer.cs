@@ -47,6 +47,13 @@
             this.grid4 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Wynik = new System.Windows.Forms.Label();
+            this.Number1 = new System.Windows.Forms.TextBox();
+            this.Number2 = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSub = new System.Windows.Forms.Button();
+            this.btnDev = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid4)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +69,7 @@
             this.historiaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(489, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(507, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,14 +85,14 @@
             // dodajWydatkiToolStripMenuItem
             // 
             this.dodajWydatkiToolStripMenuItem.Name = "dodajWydatkiToolStripMenuItem";
-            this.dodajWydatkiToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dodajWydatkiToolStripMenuItem.Size = new System.Drawing.Size(228, 34);
             this.dodajWydatkiToolStripMenuItem.Text = "Dodaj wydatki";
             this.dodajWydatkiToolStripMenuItem.Click += new System.EventHandler(this.DodajWydatkiToolStripMenuItem_Click);
             // 
             // dodajWpływToolStripMenuItem
             // 
             this.dodajWpływToolStripMenuItem.Name = "dodajWpływToolStripMenuItem";
-            this.dodajWpływToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dodajWpływToolStripMenuItem.Size = new System.Drawing.Size(228, 34);
             this.dodajWpływToolStripMenuItem.Text = "Dodaj wpływ ";
             this.dodajWpływToolStripMenuItem.Click += new System.EventHandler(this.DodajWpływToolStripMenuItem_Click);
             // 
@@ -220,11 +227,80 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(152, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Kalkulator wydatków";
+            // 
+            // Wynik
+            // 
+            this.Wynik.AutoSize = true;
+            this.Wynik.Location = new System.Drawing.Point(417, 223);
+            this.Wynik.Name = "Wynik";
+            this.Wynik.Size = new System.Drawing.Size(51, 20);
+            this.Wynik.TabIndex = 12;
+            this.Wynik.Text = "Wynik";
+            // 
+            // Number1
+            // 
+            this.Number1.Location = new System.Drawing.Point(20, 220);
+            this.Number1.Name = "Number1";
+            this.Number1.Size = new System.Drawing.Size(100, 26);
+            this.Number1.TabIndex = 13;
+            // 
+            // Number2
+            // 
+            this.Number2.Location = new System.Drawing.Point(137, 220);
+            this.Number2.Name = "Number2";
+            this.Number2.Size = new System.Drawing.Size(100, 26);
+            this.Number2.TabIndex = 14;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(255, 219);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(40, 27);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // btnSub
+            // 
+            this.btnSub.Location = new System.Drawing.Point(301, 220);
+            this.btnSub.Name = "btnSub";
+            this.btnSub.Size = new System.Drawing.Size(40, 27);
+            this.btnSub.TabIndex = 16;
+            this.btnSub.Text = "-";
+            this.btnSub.UseVisualStyleBackColor = true;
+            this.btnSub.Click += new System.EventHandler(this.BtnSub_Click);
+            // 
+            // btnDev
+            // 
+            this.btnDev.Location = new System.Drawing.Point(347, 220);
+            this.btnDev.Name = "btnDev";
+            this.btnDev.Size = new System.Drawing.Size(40, 27);
+            this.btnDev.TabIndex = 17;
+            this.btnDev.Text = "*";
+            this.btnDev.UseVisualStyleBackColor = true;
+            this.btnDev.Click += new System.EventHandler(this.BtnDev_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 177);
+            this.ClientSize = new System.Drawing.Size(507, 266);
+            this.Controls.Add(this.btnDev);
+            this.Controls.Add(this.btnSub);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.Number2);
+            this.Controls.Add(this.Number1);
+            this.Controls.Add(this.Wynik);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.grid4);
@@ -268,6 +344,13 @@
         private System.Windows.Forms.DataGridView grid4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Wynik;
+        private System.Windows.Forms.TextBox Number1;
+        private System.Windows.Forms.TextBox Number2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnSub;
+        private System.Windows.Forms.Button btnDev;
     }
 }
 

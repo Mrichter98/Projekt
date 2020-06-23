@@ -50,7 +50,7 @@ namespace Projekt
         /// <param name="e"></param>
         private void AutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Marek Richter-w58930 IID-P");
+            MessageBox.Show("Marek Richter-w58930 6IID-P \nMichał Bober-w58929 6IID");
         }
         /// <summary>
         /// metoda akcji przycisku do wyświetlenia okna w którym umieszczona jest baza danych na datagridzie
